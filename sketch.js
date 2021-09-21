@@ -39,20 +39,20 @@ function draw() {
         cat.changeAnimation("últimaImagenGato");
         cat.x=300;
         cat.scale=0.2;
-    }
-    
-    drawSprites();
-}
 
-function keyPressed(){
-    //escribe aqui el código para la animación del movimiento y cambio
-    if(keyCode === "LEFT_ARROW"){
+        mouse.addAnimation("ratónFeliz",mouseImg3);
+        mouse.changeAnimation("ratónFeliz");
+    }
+
+    if(keyDown("LEFT_ARROW")){
         mouse.addAnimation("ratónMolestando",mouseImg2);
         mouse.changeAnimation("ratónMolestando");
-        mouse.frameDelay=25;
+        mouse.frameDelay=15;
 
         cat.velocityX=-5;
         cat.addAnimation("catRunning",catImg2);
         cat.changeAnimation("catRunning");
     }
+    
+    drawSprites();
 }
